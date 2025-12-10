@@ -1,0 +1,1058 @@
+.course-quest {
+  min-height: 100vh;
+  position: relative;
+  color: #fff;
+
+  // Story Modal
+  .story-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    animation: fadeIn 0.5s ease;
+
+    .story-content {
+      max-width: 600px;
+      text-align: center;
+      padding: 3rem;
+      animation: scaleIn 0.6s ease;
+
+      .story-icon {
+        font-size: 5rem;
+        margin-bottom: 1.5rem;
+        animation: float 3s ease-in-out infinite;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        background: linear-gradient(135deg, var(--course-color), #fff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .story-intro {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #94a3b8;
+        margin-bottom: 2rem;
+      }
+
+      .story-character {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+
+        .character-icon {
+          font-size: 2.5rem;
+          animation: bounce 2s ease-in-out infinite;
+        }
+
+        .character-text {
+          color: #64748b;
+          font-style: italic;
+        }
+      }
+
+      .btn-begin {
+        padding: 1rem 3rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+        background: linear-gradient(135deg, var(--course-color), #8b5cf6);
+        border: none;
+        border-radius: 50px;
+        color: #fff;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        transition: all 0.3s ease;
+
+        .arrow {
+          transition: transform 0.3s ease;
+        }
+
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 10px 30px rgba(var(--course-color), 0.4);
+
+          .arrow {
+            transform: translateX(5px);
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  // Quest Container
+  .quest-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  // Header
+  .quest-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: rgba(30, 41, 59, 0.8);
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    .btn-back {
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
+    }
+
+    .course-info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      .course-icon {
+        font-size: 2rem;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+        margin: 0;
+      }
+    }
+
+    .user-stats {
+      display: flex;
+      gap: 1.5rem;
+
+      .stat {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+
+        .label {
+          font-size: 0.75rem;
+          color: #94a3b8;
+        }
+
+        .value {
+          font-size: 1.25rem;
+          font-weight: 700;
+        }
+
+        &.xp .value {
+          color: #22c55e;
+        }
+
+        &.level .value {
+          color: var(--course-color);
+        }
+      }
+    }
+  }
+
+  // AI Toggle
+  .ai-toggle {
+    position: fixed;
+    right: 2rem;
+    bottom: 6rem;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 50;
+    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+
+    &.active {
+      background: #22c55e;
+    }
+
+    .ai-icon {
+      font-size: 1.25rem;
+    }
+  }
+
+  // AI Assistant Panel
+  .ai-assistant-panel {
+    position: fixed;
+    right: 2rem;
+    bottom: 10rem;
+    width: 380px;
+    background: rgba(30, 41, 59, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 50;
+    animation: slideUp 0.3s ease;
+    overflow: hidden;
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .ai-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.25rem;
+      background: rgba(99, 102, 241, 0.2);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+      button {
+        background: none;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        font-size: 1.25rem;
+      }
+    }
+
+    .ai-content {
+      padding: 1.25rem;
+
+      > p {
+        color: #94a3b8;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+      }
+
+      .ai-video-options {
+        background: rgba(59, 130, 246, 0.1);
+        border-radius: 12px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+
+        .video-hint {
+          color: #60a5fa;
+          font-size: 0.85rem;
+          margin-bottom: 0.75rem;
+        }
+
+        .video-buttons {
+          display: flex;
+          gap: 0.75rem;
+
+          button {
+            flex: 1;
+            padding: 0.75rem;
+            background: rgba(59, 130, 246, 0.2);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 10px;
+            color: #60a5fa;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover, &.active {
+              background: rgba(59, 130, 246, 0.3);
+            }
+          }
+        }
+
+        .screen-preview {
+          width: 100%;
+          border-radius: 8px;
+          margin-top: 0.75rem;
+        }
+      }
+
+      .ai-input {
+        display: flex;
+        gap: 0.5rem;
+
+        input {
+          flex: 1;
+          padding: 0.75rem 1rem;
+          background: rgba(51, 65, 85, 0.5);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 10px;
+          color: #fff;
+          font-size: 0.95rem;
+
+          &::placeholder {
+            color: #64748b;
+          }
+
+          &:focus {
+            outline: none;
+            border-color: #6366f1;
+          }
+        }
+
+        .btn-send {
+          padding: 0.75rem 1rem;
+          background: #6366f1;
+          border: none;
+          border-radius: 10px;
+          color: #fff;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background: #818cf8;
+          }
+        }
+      }
+    }
+  }
+
+  // Chapters Path
+  .chapters-path {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .chapter-node {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: rgba(30, 41, 59, 0.8);
+    border-radius: 16px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+
+    &:hover:not(.locked) {
+      transform: translateX(10px);
+      border-color: var(--course-color);
+    }
+
+    &.selected {
+      border-color: var(--course-color);
+      background: rgba(var(--course-color), 0.1);
+    }
+
+    &.locked {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    &.complete {
+      .chapter-circle {
+        background: #22c55e;
+        color: #fff;
+      }
+    }
+
+    .chapter-connector {
+      position: absolute;
+      left: 50px;
+      top: -1.5rem;
+      width: 3px;
+      height: 1.5rem;
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .chapter-circle {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .chapter-info {
+      flex: 1;
+
+      h3 {
+        font-size: 1.25rem;
+        margin-bottom: 0.25rem;
+      }
+
+      p {
+        color: #94a3b8;
+        font-size: 0.9rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .progress-bar {
+        height: 6px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 3px;
+        overflow: hidden;
+
+        .progress-fill {
+          height: 100%;
+          background: var(--course-color);
+          border-radius: 3px;
+          transition: width 0.5s ease;
+        }
+      }
+
+      .unlock-text {
+        color: #f59e0b;
+        font-size: 0.85rem;
+      }
+    }
+
+    .chapter-xp {
+      background: rgba(34, 197, 94, 0.2);
+      color: #22c55e;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-weight: 600;
+    }
+  }
+
+  // Quests Panel
+  .quests-panel {
+    background: rgba(30, 41, 59, 0.9);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    animation: slideUp 0.3s ease;
+
+    .quests-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 1.5rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+      h2 {
+        margin: 0;
+        font-size: 1.25rem;
+      }
+
+      .chapter-progress {
+        color: #94a3b8;
+      }
+    }
+
+    .quests-list {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+  }
+
+  .quest-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    background: rgba(51, 65, 85, 0.5);
+    border-radius: 12px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    cursor: default;
+    opacity: 0.5;
+
+    &.available {
+      opacity: 1;
+      cursor: pointer;
+      border-color: var(--course-color);
+
+      &:hover {
+        transform: translateX(5px);
+        background: rgba(51, 65, 85, 0.8);
+      }
+    }
+
+    &.completed {
+      opacity: 1;
+
+      .quest-icon {
+        background: #22c55e;
+        color: #fff;
+      }
+    }
+
+    &.boss {
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(245, 158, 11, 0.2));
+      border-color: rgba(239, 68, 68, 0.3);
+
+      &.available {
+        border-color: #ef4444;
+      }
+    }
+
+    .quest-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+    }
+
+    .quest-info {
+      flex: 1;
+
+      h4 {
+        margin: 0 0 0.25rem 0;
+        font-size: 1rem;
+      }
+
+      .quest-type {
+        color: #64748b;
+        font-size: 0.8rem;
+        text-transform: capitalize;
+      }
+    }
+
+    .quest-xp {
+      color: #22c55e;
+      font-weight: 600;
+    }
+  }
+
+  // Quest Runner
+  .quest-runner {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+
+    .runner-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      background: rgba(30, 41, 59, 0.9);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+      .btn-exit {
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      .quest-title {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+
+        .quest-icon {
+          font-size: 1.5rem;
+        }
+
+        h2 {
+          margin: 0;
+        }
+      }
+
+      .quest-reward {
+        .xp {
+          background: rgba(34, 197, 94, 0.2);
+          color: #22c55e;
+          padding: 0.5rem 1rem;
+          border-radius: 20px;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .ai-toggle-mini {
+      position: fixed;
+      right: 1rem;
+      top: 5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(99, 102, 241, 0.8);
+      border: none;
+      border-radius: 20px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 0.9rem;
+      z-index: 50;
+
+      &.active {
+        background: #22c55e;
+      }
+    }
+
+    .runner-content {
+      flex: 1;
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    // Code Challenge
+    .code-challenge {
+      width: 100%;
+      max-width: 900px;
+
+      .challenge-description {
+        background: rgba(30, 41, 59, 0.8);
+        padding: 1.5rem;
+        border-radius: 16px;
+        margin-bottom: 1.5rem;
+
+        h3 {
+          margin: 0 0 0.75rem 0;
+          color: var(--course-color);
+        }
+
+        p {
+          color: #94a3b8;
+          margin: 0;
+        }
+      }
+
+      .code-editor {
+        background: #1e1e1e;
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 1rem;
+
+        textarea {
+          width: 100%;
+          min-height: 250px;
+          padding: 1rem;
+          background: transparent;
+          border: none;
+          color: #22c55e;
+          font-family: 'Fira Code', monospace;
+          font-size: 0.95rem;
+          resize: vertical;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+
+      .code-actions {
+        display: flex;
+        gap: 1rem;
+
+        .btn-run {
+          padding: 0.75rem 1.5rem;
+          background: #22c55e;
+          border: none;
+          border-radius: 10px;
+          color: #fff;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background: #16a34a;
+          }
+        }
+      }
+
+      .code-output {
+        background: rgba(30, 41, 59, 0.8);
+        border-radius: 12px;
+        padding: 1rem;
+        margin-top: 1rem;
+
+        pre {
+          margin: 0;
+          color: #94a3b8;
+          font-family: 'Fira Code', monospace;
+          white-space: pre-wrap;
+        }
+      }
+    }
+
+    // Flashcard Quest
+    .flashcard-quest {
+      text-align: center;
+
+      .flashcard {
+        width: 400px;
+        height: 250px;
+        background: rgba(30, 41, 59, 0.9);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+        border: 2px solid var(--course-color);
+
+        .flashcard-front {
+          padding: 2rem;
+
+          p {
+            font-size: 1.25rem;
+            color: #fff;
+          }
+        }
+      }
+
+      .flashcard-controls {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+
+        button {
+          padding: 0.75rem 1.5rem;
+          border-radius: 10px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          border: none;
+
+          &.btn-flip {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+          }
+
+          &.btn-next {
+            background: #22c55e;
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    // Quiz Quest
+    .quiz-quest {
+      max-width: 600px;
+      width: 100%;
+
+      .question {
+        background: rgba(30, 41, 59, 0.9);
+        padding: 2rem;
+        border-radius: 16px;
+        margin-bottom: 1.5rem;
+        text-align: center;
+
+        h3 {
+          color: #94a3b8;
+          margin-bottom: 1rem;
+        }
+
+        p {
+          font-size: 1.25rem;
+        }
+      }
+
+      .options {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        button {
+          padding: 1rem 1.5rem;
+          background: rgba(51, 65, 85, 0.5);
+          border: 2px solid transparent;
+          border-radius: 12px;
+          color: #fff;
+          font-size: 1rem;
+          cursor: pointer;
+          text-align: left;
+          transition: all 0.3s ease;
+
+          &:hover {
+            border-color: var(--course-color);
+            background: rgba(51, 65, 85, 0.8);
+          }
+        }
+      }
+    }
+
+    // Boss Battle
+    .boss-battle {
+      text-align: center;
+      max-width: 500px;
+
+      .boss-icon {
+        font-size: 5rem;
+        animation: shake 0.5s ease-in-out infinite;
+      }
+
+      @keyframes shake {
+        0%, 100% { transform: translateX(0); }
+        25% { transform: translateX(-5px); }
+        75% { transform: translateX(5px); }
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+      }
+
+      p {
+        color: #94a3b8;
+        margin-bottom: 1.5rem;
+      }
+
+      .boss-tasks {
+        background: rgba(30, 41, 59, 0.8);
+        border-radius: 16px;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        text-align: left;
+
+        .task {
+          padding: 0.75rem 0;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          color: #94a3b8;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          &.completed {
+            color: #22c55e;
+          }
+        }
+      }
+
+      .btn-boss-fight {
+        padding: 1rem 3rem;
+        background: linear-gradient(135deg, #ef4444, #f59e0b);
+        border: none;
+        border-radius: 50px;
+        color: #fff;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    // Simulation Quest
+    .simulation-quest {
+      text-align: center;
+
+      canvas {
+        background: rgba(30, 41, 59, 0.9);
+        border-radius: 16px;
+        margin-bottom: 1.5rem;
+      }
+
+      .simulation-controls {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        background: rgba(30, 41, 59, 0.8);
+        padding: 1.5rem;
+        border-radius: 16px;
+
+        label {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          color: #94a3b8;
+
+          input {
+            flex: 1;
+          }
+        }
+
+        button {
+          padding: 0.75rem 1.5rem;
+          background: var(--course-color);
+          border: none;
+          border-radius: 10px;
+          color: #fff;
+          font-weight: 600;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  // Quest Complete Modal
+  .quest-complete-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    animation: fadeIn 0.3s ease;
+
+    .complete-content {
+      text-align: center;
+      padding: 3rem;
+      animation: scaleIn 0.4s ease;
+
+      .complete-icon {
+        font-size: 5rem;
+        margin-bottom: 1rem;
+        animation: bounce 0.6s ease;
+      }
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        background: linear-gradient(135deg, var(--course-color), #22c55e);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      p {
+        font-size: 1.25rem;
+        color: #94a3b8;
+        margin-bottom: 2rem;
+
+        strong {
+          color: #22c55e;
+        }
+      }
+
+      .btn-continue {
+        padding: 1rem 3rem;
+        background: linear-gradient(135deg, #22c55e, #16a34a);
+        border: none;
+        border-radius: 50px;
+        color: #fff;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: translateY(-3px);
+        }
+      }
+    }
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .course-quest {
+    .quest-container {
+      padding: 1rem;
+    }
+
+    .quest-header {
+      flex-wrap: wrap;
+      gap: 1rem;
+
+      .course-info h1 {
+        font-size: 1.25rem;
+      }
+    }
+
+    .ai-toggle {
+      right: 1rem;
+      bottom: 5rem;
+      padding: 0.75rem 1rem;
+    }
+
+    .ai-assistant-panel {
+      right: 1rem;
+      left: 1rem;
+      width: auto;
+      bottom: 8rem;
+    }
+
+    .chapter-node {
+      flex-wrap: wrap;
+
+      .chapter-xp {
+        width: 100%;
+        text-align: center;
+        margin-top: 0.5rem;
+      }
+    }
+
+    .quest-runner {
+      .code-challenge {
+        .code-editor textarea {
+          min-height: 200px;
+        }
+      }
+
+      .flashcard-quest .flashcard {
+        width: 100%;
+        max-width: 350px;
+        height: 200px;
+      }
+    }
+  }
+}

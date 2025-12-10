@@ -1,0 +1,519 @@
+Changing the
+Home
+Connectivity
+Landscape.
+"Experience ultimate connectivity speeds at
+amazing prices."
+
+Promotional Launch Offer
+For
+
+=
+
+HUAWEI LTE
+ROUTER
+
+LTE SIM
+
+S4H BUNDLE
+
+Notes
+o
+
+o
+o
+o
+
+Smart4Home (WTTH) is a Fixed Wireless Access for
+the home offered with discounted bundles at
+unrestricted speeds available to selected
+customers.
+Selected Econet Prepaid Subscribers eligible for
+this phase.
+Identification required for Sim Registration.
+Router is plug & play with no installation
+required.
+
+SMART4HOME PURCHASING PROCESS
+
+Step 1
+Onboarding
+Customer visits Econet Shop,
+purchases Smart4Home Sim
+Card for USD$1 and Sales
+Consultant registers
+Smart4Home MSISDN
+(provided by Broadband
+Team) Smart4Home Router
+for USD$48. Consultant
+proceeds to receipt CPE
+(S4HCPEB320) and input the
+Smart4Home number for
+Promo Bundle
+crediting.Smart4Home 100GB
+100GB Bundle is credited
+automatically
+
+Step 2
+Functionality
+Smart4Home Bundles are
+available on *143#
+Option 1 (USD Bundles)
+then Option 8
+(Smart4Home Bundles)
+and Balance Enquiry is
+done on *143# Option 1
+(USD Bundles), Option 1
+(Check Balance) then
+Option 4 ( Smart4Home)
+
+Step 4
+Query Escalation
+Fo failed Smart4Home
+100GB Promo bundle
+crediting, Consultant to
+send an email to
+Broadband Team
+providing S4H Line &
+Router receipt.
+For failed router
+purchases, Consultant to
+raise a ticket with Ecorec
+Team.
+
+SMART4HOME VS SMARTBIZ COMPARISON
+
+Smart4Home
+
+SmartBiz
+
+S4H is a fixed
+wireless product
+for the Home
+
+SmartBiz is a
+fixed wireless
+product for the
+Business
+
+Connectivity
+The product offers
+unrestricted speeds
+
+Equipment
+The S4H package
+includes a router &
+SimCard.
+
+Connectivity
+Offers have
+different speeds
+starting from
+5Mbps.
+
+Equipment
+Customer can
+bring their own
+router.
+
+FREQUENTLY ASKED QUESTIONS
+FAQs – SMART4HOME
+1.
+What is Smart4Home?
+It is fixed wireless access offer with discounted bundles.
+2.
+What is the difference from SmartBiz?
+Smart4Home bundles are bundles specifically for the home user offering unrestricted speeds, whilst SmartBiz offers bundles with different
+speed caps.
+3.
+Can I purchase the Smart4Home line only as I already have my own router?
+No, the product is a combo, whereby on purchase the customer gets the router and Sim Card.
+4.
+Where can we find these bundles?
+For the initial purchase of a router and Sim card the customer must visit an Econet shop. To purchase the Smart4Home bundles the
+customer can visit *143# USSD, choose Option 1, Choose Option 8and then select the preferred bundle, enter the Smart4Home number
+and choose payment option to complete the transaction.
+5.
+What is the validity of these bundles.
+The bundles are all valid for 30days.
+6.
+Is this a promotion, and if so, how long will it last?
+These are long term products that will be available for our customers going forward.
+
+ECONET
+WIRELESS
+Smart4U Data packages
+
+Chenayi Manhambara
+
+Unlimited Bundles
+
+About
+
+Target Customers
+
+They are Voice, data
+and SMS combined
+bundles
+
+Smart4U Bundles
+target all customer
+value segments that is
+LVC, MVC and HVC
+
+Mechanics
+
+How to access the UB
+
+The bundles are based on
+the customer spend
+pattern in the past 3
+months and offers will be
+specific to each customer
+
+The Customer dial *143#,
+select currency, select
+Data and select option 7
+Smart4U (USD) or option 6
+Smart4U (ZWG)
+
+Unlimited Bundle Proposal- Creating unlimited offers for all customers segments
+
+Notes
+ The data component has a cap as outlined above with a Fair Usage Policy. Throttling (reducing the speeds) of speeds will be implemented at each
+component stage.
+ The offers are based on the customer spend patterns for the past 3 months
+ Offers are different from one person to the other.
+ Customers will pay using EcoCash or Airtime, USD or ZiG.
+ Smart4U Offers are not available to all customers, and we will be adding more customers gradually.
+
+Customer Journey
+
+Customer
+receives
+targeted sms
+about the
+Smart4U
+bundle offers
+
+Customer
+purchases the
+targeted bundle
+by dialing
+*143#
+
+Customer select
+payment
+method ie MA
+or EcoCash
+
+Customers
+enjoys the
+Smart4U offer
+
+DATA: MY FAVOURITE PRODUCT FRAMEWORK
+The 'My Favourite' bundle represents the most frequently purchased or preferred combination of items by our
+customers. It provides a convenient and efficient way for users to quickly select their favorite bundle from the
+menu, streamlining the ordering process and enhancing the overall customer experience.
+
+Overview
+Customer should
+be a registered
+Econet
+subscriber and
+have been
+purchasing data
+bundles
+
+Menu
+Selection
+1. Dial *143#
+2. Select option 1
+USD Data
+Bundles.
+3. Select option 3
+Data
+4. Select option 2
+My Favourite
+
+Solution
+- Any technical
+challenges faced
+by customers
+should be
+reported to VAS
+team.
+- Failed bundles
+purchase to the
+back-office.
+
+Outcome
+Quickest and
+easiest way to
+grab the
+customer’s
+favorite combo
+from the menu in
+one go.
+
+Data Gifting Product Framework
+
+Availability
+Data Gifting will only be
+availed to Econet
+Subscribers via “USSD
+143.
+
+Eligibility
+Data Gifting Service is for
+customers with a minimum
+data volume of 500 MB in
+their balance.
+
+01
+
+02
+
+04
+
+Data Gifting
+Product
+Framework
+
+05
+
+Transactional Limits
+
+Daily Limit- 1GB
+Monthly Limit-5GB
+
+Costs Schedule
+Gifting of data to be
+charged at US $0.25 per
+transaction or equivalent
+
+T&C
+
+Minlimit-250MB
+Max Limit-1GB
+
+Product Validity
+The gifted portion (data
+bundle) will be valid for 7
+days after the day of
+gifting.
+
+03
+
+06
+
+All subscribers that
+subscribe to the service
+are bound by Terms and
+Conditions
+
+NIGHT BUNDLES-SOCIAL BUNDLES:
+ Night Bundles are Data bundles that are specifically available for use from 2300hrs to 0400hrs only. The bundles are combos
+that include general data bundle & a social media bundle.
+ Social combos comprise of general data bundles and social media bundles that are available for anytime usage and are lowly
+priced from as little as US$0.10 to US$2.00.
+Bundle
+Night Bundles (23.00-04.00)
+Data 250Mb + WhatsApp 50Mb
+Data 1GB + TikTok 100Mb
+Data 100Mb + Facebook 30Mb
+Data 500Mb + WhatsApp 100Mb
+Data 1Gb + Facebook 200Mb
+Data 4GB + TikTok 1GB
+Data 13GB + Facebook 500Mb
+Data 22GB + Youtube 2GB
+Hourly Bundles
+Data 50Mb + WhatsApp 10Mb
+Data 100Mb + Twitter 20Mb
+Daily Bundles
+Data 50Mb + Facebook 5Mb
+Data 100Mb + WhatsApp 20Mb
+Data 140Mb + Twitter 15Mb
+Data 500Mb + WhatsApp 50Mb
+Weekly Bundles
+Data 100Mb + WhatsApp 20Mb
+Data 350Mb + Facebook 35Mb
+TikTok Bundles
+TikTok 100Mb + WhatsApp 20Mb
+TikTok 100Mb + Twitter 10Mb
+TikTok 250Mb + Facebook 25Mb
+
+Volume (MB)
+300
+1100
+130
+600
+1200
+5120
+13824
+24576
+
+Validity
+
+USD
+
+Daily
+Daily
+3 Days
+3 Days
+Weekly
+Weekly
+Monthly
+Monthly
+
+0.30
+1.00
+0.15
+0.60
+2.00
+5.00
+16.00
+24.00
+
+60 Hourly
+120 Hourly
+
+0.10
+0.20
+
+55
+120
+155
+550
+
+0.20
+0.50
+0.70
+1.00
+
+Daily
+Daily
+Daily
+Daily
+
+120 Weekly
+335 Weekly
+
+1.00
+2.00
+
+120 Hourly
+110 Daily
+275 Weekly
+
+0.20
+0.50
+1.00
+
+Rule
+
+Description
+
+Currency
+
+The bundles are available in USD
+currency only.
+
+Availability
+
+The bundles must be available
+24hrs a day.
+
+Validity
+
+Night bundles must be valid from
+2300hrs to 0400hrs.
+The validity of the bundles must be
+activated by usage.
+
+Precedence
+
+The night bundle takes precedence
+over existing bundles on the
+subscriber account.
+
+NIGHT BUNDLES-SOCIAL BUNDLES: CUSTOMER JOURNEY
+
+01
+
+The customer chooses
+the preferred bundle and
+confirm the purchase
+process
+
+The customer dials
+*143#, My Econet App &
+EcoCash
+
+04
+
+02
+
+They pick the option for
+Night Bundles or Social
+Combos
+
+03
+
+They go to the data folder
+
+FIXED WIRELESS ACCESS: DEFINATIONS AND ELIGIBILITY
+
+Wireless Access
+Solution
+
+Monthly Package
+
+The Internet service
+
+A predefined bundle of
+
+provided by us, including
+
+data and other services
+
+access to the internet
+
+offered for a specific
+
+through a designated APN
+
+monthly fee.
+
+WTTH
+
+Wireless to Home
+
+WTTB
+
+Wireless to the Business.
+
+and data packages.
+
+01
+
+03
+
+This service is open to all
+Econet Subscribers.
+
+Have a 4G/5G provisioned
+router
+
+02
+
+Reside , operate business
+situated in the selected areas
+with 4G/LTE.
+
+04
+
+Have an Econet LTE
+provisioned Sim card.
+
+

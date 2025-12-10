@@ -1,0 +1,172 @@
+:root {
+  /* Core Colors - Dark & Premium */
+  --background: #050505;
+  --text: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  
+  /* Neon Accents */
+  --accent-primary: #00f2ff; /* Cyan Neon */
+  --accent-secondary: #7000ff; /* Purple Neon */
+  --accent-success: #00ff9d;
+  --accent-warning: #ffb800;
+  --accent-error: #ff0055;
+
+  /* Glassmorphism Variables */
+  --glass-bg: rgba(20, 20, 20, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-blur: 20px;
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+  /* Legacy Variables (kept for compatibility, mapped to new theme) */
+  --gray-200: var(--text-secondary);
+  --gray-300: var(--text-secondary);
+  --gray-500: #5f6368;
+  --gray-600: #444444;
+  --gray-700: #202020;
+  --gray-800: #171717;
+  --gray-900: #111111;
+  --gray-1000: #0a0a0a;
+  --border-stroke: var(--glass-border);
+  --accent-blue: var(--accent-primary);
+  --accent-blue-active-bg: rgba(0, 242, 255, 0.1);
+  --accent-blue-active: var(--accent-primary);
+  --accent-blue-headers: var(--accent-primary);
+  --accent-green: var(--accent-success);
+  --midnight-blue: #000000;
+  --blue-30: var(--accent-primary);
+  --accent-red: var(--accent-error);
+
+  --font-family: "Inter", "Roboto", "Space Mono", monospace;
+
+  /* Scrollbar */
+  scrollbar-color: var(--accent-primary) transparent;
+  scrollbar-width: thin;
+}
+
+html, body {
+  font-family: var(--font-family);
+  background: black; /* Ensure black background everywhere */
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scrolling on body */
+  height: 100%;
+  width: 100%;
+}
+
+/* Glassmorphism Utility */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: 24px;
+}
+
+.material-symbols-outlined {
+  &.filled {
+    font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+  }
+}
+
+.hidden { display: none; }
+.flex { display: flex; }
+.h-screen-full { height: 100vh; }
+.w-screen-full { width: 100vw; }
+.flex-col { flex-direction: column; }
+
+.streaming-console {
+  background: black; /* Fallback */
+  color: var(--text);
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  position: relative; /* Context for absolute children */
+  overflow: hidden;
+
+  a, a:visited, a:active { color: var(--text); }
+
+  .disabled {
+    pointer-events: none;
+    opacity: 0.5;
+    > * { pointer-events: none; }
+  }
+
+  /* Main Content Area (Overlay) */
+  main {
+    position: relative;
+    z-index: 10; /* Above video */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Push controls to bottom */
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Let clicks pass through to video/canvas if needed, enable on children */
+    
+    > * {
+      pointer-events: auto; /* Re-enable clicks on UI elements */
+    }
+  }
+
+  .main-app-area {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    align-items: flex-start; /* Align top */
+    justify-content: center;
+    padding-top: 20px;
+  }
+}
+
+/* Video Player - Fullscreen Background */
+.stream {
+  position: fixed; /* Force fixed to cover viewport */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; /* Fill screen */
+  z-index: 0; /* Behind everything */
+  border-radius: 0;
+}
+
+/* Mobile optimizations */
+@media only screen and (max-width: 768px) {
+  .streaming-console {
+    height: 100vh;
+    height: -webkit-fill-available;
+
+    main {
+      padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+    }
+  }
+  
+  /* Ensure touch targets are at least 44x44 */
+  button, a, input, select {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* iOS-specific fixes */
+@supports (-webkit-touch-callout: none) {
+  body {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    height: -webkit-fill-available;
+    background: black; /* Ensure black background to hide white bars */
+  }
+
+  .streaming-console {
+    height: 100vh;
+    height: -webkit-fill-available;
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    background: black;
+  }
+}

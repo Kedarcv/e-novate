@@ -1,0 +1,67 @@
+ECOCASH JUNIOR WALLET FAQs
+Q1: What is an EcoCash Junior wallet?
+Answer: The EcoCash Junior Wallet is an exciting innovation from EcoCash that enables children between the
+age of 9 and 18 to have their own EcoCash wallets. This Junior Wallet enables a child to transact with the
+Q2: How do you register an EcoCash Junior Wallet?
+Answer: EcoCash Junior wallet is registered by dialling *151# or *153# enter EcoCash PIN and select option 5
+Junior Wallet. Alternatively you can log on to the EcoCash WEB self- service portal on
+Q3: What is the age range for children who should be registered on EcoCash Junior wallet?
+Answer: The age range for the EcoCash Junior wallet registration is between 9-18 years
+Q4: Who is considered as a parent?
+Answer: A parent is a biological parent as registered on the child's birth certificate or it can be a legal guardian
+who is over 25 years old with documentation proving the child's guardianship.
+Q5: How many parents can be associated to one Junior wallet?
+Answer: Unfortunately, at the present moment only 1 parent may be associated to an EcoCash Junior wallet.
+Q6: How many Junior wallets can be linked to one parent?
+Answer: A parent or legal guardian can register only 4 Junior wallets at the moment.
+Q7: Who has full control over the Junior wallet ?
+Answer: The only person who has full control over the EcoCash Junior wallet is the parent or legal guardian.
+Q8 Is the mobile application available yet for Junior wallet?
+Answer: Unfortunately, the mobile application is not yet available for the EcoCash Junior wallet but it is work in
+Q9 What services are available on EcoCash Junior wallet?
+Answer: The EcoCash Junior wallet has exciting services such as send money, make payment, access wallet
+services and purchase airtime. As a parent you are able to withdraw money from child, Send money to child,
+Q10 How do you fund a Junior wallet?
+Answer: At the moment only the linked parent can fund the Junior wallet through sending money
+Q11 Does a Junior wallet have an EcoCash FCA wallet?
+Answer: Yes, the junior wallet has an FCA wallet that is created automatically upon registration as with every
+Q12 Are banking services available on Junior wallet?
+Answer: At the present moment banking services are not yet available on the EcoCash Junior wallet.
+Q13 In the event of account churn(Junior wallet), who gets the settlement?
+Answer: When an account is churned or deleted from the EcoCash platform the funds are settled or credited
+Q14: What are the limits for the EcoCash Junior wallet?
+Answer: 1) Send money limit per transaction is ZWL15,000 and monthly limit is ZWL100,000.
+2) Merchant payment-limit per transaction is ZWL30,000 and monthly ZWL130,000
+3) Junior FCA account limits per transaction for send money and merchant payment are USD 175 and
+Q15: Can a child register for other services such as EcoSure?
+Answer: Unfortunately, the child is unable to register for any other services except transact on EcoCash.
+Q16: How does one submit forms after registering a child on the EcoCash Junior wallet?
+Answer: Customer will receive an SMS with link that is used to upload their child's documents. If for any reason
+they fail to access the link the parent can contact customer services for the link to be resent to them.
+Q17: What is the process of handling customers who are failing to register Junior wallets on a previously
+Answer: Issue is logged on Manage Engine to the IS technical team for resolution, once resolved customer is
+Q18: Can you change the parent that registered the Junior wallet?
+Answer: Yes it is possible to do so, you simply requests to disassociate the EcoCash Junior wallet from the
+account it registered on to your account through our EcoCash Contact Centre, Econet shop or Social Media
+Q19: Since we are linked does my child use my PIN to access their account?
+
+Answer: No, your child will have their own PIN that is used to access their Junior Wallet.
+Q20: What happens if my child blocks their PIN?
+Answer: If your child blocks their PIN as a parent or legal guardian you can engage us through any of the Support
+channels listed below. Your child can also contact us and we will ask them the usual security questions before
+Q21: If my child is overspending can I block their account?
+Answer: Unfortunately, you are not able to block the account, however you can withdraw funds from their
+Q22: Do I have visibility of where my child spends money?
+Answer: Absolutely! As a parent you have visibility of how your child is transacting on EcoCash. You are able to
+check their mini statement which records the last 5 transaction and also have the option to check their balance.
+Q23: What happens if a child sends money to the wrong recipient?
+Answer: There are self service option available on *150# and Thembie the chatbot. Alternatively the child can
+Q24: What are the customer care numbers?
+Toll Free line - 114
+Thembie Chatbot - 0777222150
+SMS Helpline - 0771222114
+Facebook - EcoCash Zimbabwe
+Twitter - @EcoCashZW
+Instagram - EcoCash_Zimbabwe
+
+

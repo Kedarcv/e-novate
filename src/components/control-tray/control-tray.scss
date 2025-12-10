@@ -1,0 +1,135 @@
+.control-tray {
+  position: fixed;
+  top: auto;
+  bottom: calc(2rem + env(safe-area-inset-bottom)); /* Respect safe area */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 20;
+  
+  /* Glass container for the whole tray */
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: 50px; /* Pill shape */
+  padding: 0.75rem 1.5rem;
+
+  .actions-nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    background: transparent;
+    border: none;
+    padding: 0;
+
+    &.disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+
+  /* Connection Button Container */
+  .connection-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 1px solid var(--glass-border);
+    padding-left: 1rem;
+    margin-left: 0.5rem;
+
+    .text-indicator {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent-primary);
+      margin-top: 4px;
+      text-shadow: 0 0 5px var(--accent-primary);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    &.connected .text-indicator {
+      opacity: 1;
+    }
+  }
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+
+  .material-symbols-outlined {
+    font-size: 24px;
+    z-index: 2;
+  }
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-color: var(--text-secondary);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  /* Mic Button */
+  &.mic-button {
+    &:hover {
+      border-color: var(--accent-error);
+      box-shadow: 0 0 15px rgba(255, 0, 85, 0.3);
+      color: var(--accent-error);
+    }
+  }
+
+  /* Connect Toggle (Play/Pause) */
+  &.connect-toggle {
+    width: 64px;
+    height: 64px;
+    background: var(--accent-primary);
+    color: #000;
+    border: none;
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.4);
+
+    &:hover {
+      background: #fff;
+      box-shadow: 0 0 30px rgba(0, 242, 255, 0.6);
+      transform: scale(1.05);
+    }
+
+    &.connected {
+      background: var(--accent-error); /* Red for stop */
+      color: white;
+      box-shadow: 0 0 20px rgba(255, 0, 85, 0.4);
+
+      &:hover {
+        background: #ff3377;
+        box-shadow: 0 0 30px rgba(255, 0, 85, 0.6);
+      }
+    }
+  }
+}
+
+/* Audio Pulse Visualization inside button */
+.action-button canvas {
+  width: 100% !important;
+  height: 100% !important;
+  opacity: 0.6;
+}
+
