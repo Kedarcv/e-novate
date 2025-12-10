@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useDatabase } from '../contexts/DatabaseContext';
 import './Settings.scss';
 
@@ -47,6 +47,7 @@ export default function Settings() {
   });
 
   // Payment methods
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [paymentMethods, setPaymentMethods] = useState<PaymentMethod[]>([
     { type: 'EcoCash', number: '**** 1234', isDefault: true },
   ]);

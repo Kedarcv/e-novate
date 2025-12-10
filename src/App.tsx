@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { DatabaseProvider } from './contexts/DatabaseContext';
-import { useEffect } from 'react';
 import MainLayout from './layouts/MainLayout';
 import LandingPage from './pages/LandingPage';
 import Dashboard from './pages/Dashboard';

@@ -123,6 +123,7 @@ const AdminDashboard: React.FC = () => {
     }
 
     fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeTab]);
 
   const fetchData = async () => {

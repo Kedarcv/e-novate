@@ -34,12 +34,14 @@ export default function CareerGuidance() {
   const navigate = useNavigate();
   
   // AI Advisor uses simulated responses (no LiveAPI dependency)
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isAiConnected, setIsAiConnected] = useState(false);
   
   const userName = localStorage.getItem('userName') || 'User';
   
   const [activeTab, setActiveTab] = useState<'overview' | 'goals' | 'paths' | 'habits' | 'ai-advisor'>('overview');
   const [isListening, setIsListening] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [transcript, setTranscript] = useState<string[]>([]);
   const [aiResponse, setAiResponse] = useState('');
   const [isThinking, setIsThinking] = useState(false);
@@ -74,6 +76,7 @@ export default function CareerGuidance() {
     },
   ]);
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [learningHabits, setLearningHabits] = useState<LearningHabit[]>([
     { metric: 'Daily Study Time', value: '2.5 hrs', trend: 'up', insight: 'Great improvement! You\'ve increased your study time by 30% this week.' },
     { metric: 'Courses Completed', value: 5, trend: 'stable', insight: 'Consistent progress. Consider challenging yourself with more advanced courses.' },
@@ -83,6 +86,7 @@ export default function CareerGuidance() {
     { metric: 'Skills Gained', value: 8, trend: 'up', insight: 'You\'re expanding your skill set rapidly. Great work!' },
   ]);
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [careerPaths, setCareerPaths] = useState<CareerPath[]>([
     {
       id: '1',

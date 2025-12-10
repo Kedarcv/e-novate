@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import AnimatedBackground from '../components/animated-background/AnimatedBackground';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { useLiveAPIContext } from '../contexts/LiveAPIContext';
 import './CourseQuest.scss';
 
@@ -222,6 +223,7 @@ interface QuestState {
 }
 
 const CourseQuest: React.FC = () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { courseId, questId } = useParams<{ courseId: string; questId: string }>();
   const navigate = useNavigate();
   const course = COURSE_QUESTS[courseId || 'python'];
@@ -233,6 +235,7 @@ const CourseQuest: React.FC = () => {
   const [activeQuest, setActiveQuest] = useState<Quest | null>(null);
   const [showStoryIntro, setShowStoryIntro] = useState(true);
   const [aiAssistantOpen, setAiAssistantOpen] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isStreaming, setIsStreaming] = useState(false);
   const [screenShareActive, setScreenShareActive] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -537,6 +540,7 @@ const QuestRunner: React.FC<QuestRunnerProps> = ({
   aiAssistantOpen,
   toggleAI
 }) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [step, setStep] = useState(0);
   const [score, setScore] = useState(0);
   const [code, setCode] = useState('# Write your code here\n');

@@ -382,6 +382,7 @@ function greet(name) {
           {
             id: 2,
             question: 'What is the correct way to write a template literal?',
+            // eslint-disable-next-line no-template-curly-in-string
             options: ['\'Hello ${name}\'', '"Hello ${name}"', '`Hello ${name}`', '(Hello ${name})'],
             correct: 2,
           },

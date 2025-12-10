@@ -92,6 +92,7 @@ const MODULE_CONTENT: Record<string, Record<string, ModuleContent>> = {
         { front: 'What is JavaScript?', back: 'A programming language that runs in web browsers and enables interactive web pages' },
         { front: 'How do you declare a variable with let?', back: 'let variableName = value;' },
         { front: 'What is the difference between let and const?', back: 'let can be reassigned, const cannot be reassigned' },
+        // eslint-disable-next-line no-template-curly-in-string
         { front: 'What are template literals?', back: 'Strings using backticks that allow embedded expressions: `Hello ${name}`' },
         { front: 'What is console.log()?', back: 'A function that outputs messages to the browser console' },
       ],
@@ -102,6 +103,7 @@ const MODULE_CONTENT: Record<string, Record<string, ModuleContent>> = {
       ],
       codeChallenges: [
         { title: 'Variable Declaration', description: 'Declare a const name with your name and log it', starterCode: '// Declare and log your name\n', solution: 'const name = "Student";\nconsole.log(name);', hints: ['Use const for constants', 'console.log() prints values'] },
+        // eslint-disable-next-line no-template-curly-in-string
         { title: 'Template Literal', description: 'Create a greeting using template literals', starterCode: 'const name = "World";\n// Create greeting\n', solution: 'const name = "World";\nconst greeting = `Hello, ${name}!`;\nconsole.log(greeting);', hints: ['Use backticks ``', 'Use ${} to embed variables'] },
       ],
       physicsSimulations: [],

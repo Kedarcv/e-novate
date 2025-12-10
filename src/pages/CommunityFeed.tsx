@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDatabase } from '../contexts/DatabaseContext';
-import { db, Post } from '../lib/database';
+import { db } from '../lib/database';
 import './CommunityFeed.scss';
 
 type PostType = 'all' | 'text' | 'code' | 'achievement' | 'question';
