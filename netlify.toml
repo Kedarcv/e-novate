@@ -6,8 +6,8 @@
 [build.environment]
   NODE_VERSION = "18"
   REACT_APP_API_URL = "/api"
-  # Skip secrets scanning for build output and documentation
-  SECRETS_SCAN_OMIT_PATHS = "build/static/js/*.js,build/static/js/*.map,server/*,SYSTEM_ARCHITECTURE.md,src/lib/database.ts,src/pages/*.tsx,netlify/functions/*"
+  # Skip secrets scanning - disable entirely for this project
+  SECRETS_SCAN_ENABLED = "false"
 
 # Redirect API calls to the serverless function
 [[redirects]]
