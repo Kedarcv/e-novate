@@ -88,7 +88,7 @@ export default function Wallet() {
   const [loadStep, setLoadStep] = useState<'amount' | 'confirm' | 'processing' | 'success'>('amount');
   const [error, setError] = useState('');
 
-  const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3001/api';
+  const API_URL = process.env.REACT_APP_API_URL || '/api';
   const token = localStorage.getItem('authToken');
 
   useEffect(() => {

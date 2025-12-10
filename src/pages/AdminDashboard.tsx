@@ -106,7 +106,7 @@ const AdminDashboard: React.FC = () => {
 
   const [generatedContent, setGeneratedContent] = useState<any>(null);
 
-  const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3001/api';
+  const API_URL = process.env.REACT_APP_API_URL || '/api';
   const token = localStorage.getItem('authToken');
 
   const headers = {

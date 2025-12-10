@@ -1,7 +1,21 @@
 [build]
   command = "npm run build"
   publish = "build"
+  functions = "netlify/functions"
 
 [build.environment]
+  NODE_VERSION = "18"
   # Skip secrets scanning for build output and documentation
-  SECRETS_SCAN_OMIT_PATHS = "build/static/js/*.js,build/static/js/*.map,server/*,SYSTEM_ARCHITECTURE.md,src/lib/database.ts,src/pages/*.tsx"
+  SECRETS_SCAN_OMIT_PATHS = "build/static/js/*.js,build/static/js/*.map,server/*,SYSTEM_ARCHITECTURE.md,src/lib/database.ts,src/pages/*.tsx,netlify/functions/*"
+
+# Redirect API calls to the serverless function
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+
+# Handle SPA routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

@@ -65,7 +65,7 @@ export default function ClientPortal() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [newMessage, setNewMessage] = useState('');
 
-  const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3001/api';
+  const API_URL = process.env.REACT_APP_API_URL || '/api';
   const token = localStorage.getItem('authToken');
   const userName = localStorage.getItem('userName') || 'Client';
 

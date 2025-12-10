@@ -1,7 +1,8 @@
 // MongoDB API Service for E-Novate Learning Platform
 // Handles all database operations through the backend API
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3001/api';
+// Use relative URL for production (Netlify Functions) or localhost for development
+const API_URL = process.env.REACT_APP_API_URL || '/api';
 
 // Generate unique session ID
 const getSessionId = (): string => {
