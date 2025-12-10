@@ -1,6 +1,9 @@
 {
   "name": "multimodal-live-api-web-console",
   "version": "0.1.0",
+  "engines": {
+    "node": "18.x"
+  },
   "dependencies": {
     "@capacitor/cli": "^8.0.0",
     "@capacitor/core": "^8.0.0",
