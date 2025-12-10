@@ -102,8 +102,17 @@ export default function Wallet() {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       const data = await res.json();
-      if (data.success) {
-        setWalletData(data.wallet);
+      if (data.success && data.wallet) {
+        // Merge API wallet data with default values to ensure all arrays exist
+        setWalletData(prev => ({
+          ...prev,
+          ...data.wallet,
+          transactions: data.wallet.transactions || [],
+          availableGigs: data.wallet.availableGigs || prev.availableGigs,
+          myGigs: data.wallet.myGigs || prev.myGigs,
+          vouchers: data.wallet.vouchers || prev.vouchers,
+          tutoringSessions: data.wallet.tutoringSessions || prev.tutoringSessions
+        }));
       }
     } catch (error) {
       console.error('Error fetching wallet:', error);
@@ -632,7 +641,7 @@ export default function Wallet() {
         >
           <span className="material-symbols-outlined">work</span>
           Gigs
-          {walletData.availableGigs.length > 0 && (
+          {(walletData.availableGigs?.length || 0) > 0 && (
             <span className="badge">{walletData.availableGigs.length}</span>
           )}
         </button>
@@ -720,14 +729,14 @@ export default function Wallet() {
 
             <section className="section">
               <h3>Recent Transactions</h3>
-              {walletData.transactions.length === 0 ? (
+              {(walletData.transactions?.length || 0) === 0 ? (
                 <div className="empty-state">
                   <span className="material-symbols-outlined">receipt_long</span>
                   <p>No transactions yet</p>
                 </div>
               ) : (
                 <div className="transactions-list">
-                  {walletData.transactions.slice(0, 5).map(tx => (
+                  {(walletData.transactions || []).slice(0, 5).map(tx => (
                     <div key={tx._id} className="transaction-item">
                       <div className="tx-icon" style={{ backgroundColor: getTransactionColor(tx.type) + '20' }}>
                         <span className="material-symbols-outlined">{getTransactionIcon(tx.type)}</span>
@@ -754,11 +763,11 @@ export default function Wallet() {
             <section className="section">
               <div className="section-header">
                 <h3>Available Gigs</h3>
-                <span className="gig-count">{walletData.availableGigs.length} opportunities</span>
+                <span className="gig-count">{walletData.availableGigs?.length || 0} opportunities</span>
               </div>
               <p className="section-desc">Earn money by completing micro-tasks and freelance projects</p>
               
-              {walletData.availableGigs.length === 0 ? (
+              {(walletData.availableGigs?.length || 0) === 0 ? (
                 <div className="empty-state">
                   <span className="material-symbols-outlined">work_off</span>
                   <p>No gigs available right now</p>
@@ -766,7 +775,7 @@ export default function Wallet() {
                 </div>
               ) : (
                 <div className="gigs-grid">
-                  {walletData.availableGigs.map(gig => (
+                  {(walletData.availableGigs || []).map(gig => (
                     <div key={gig.id} className="gig-card">
                       <div className="gig-header">
                         <span className="gig-category">{gig.category}</span>
@@ -789,7 +798,7 @@ export default function Wallet() {
 
             <section className="section">
               <h3>My Active Gigs</h3>
-              {walletData.myGigs.length === 0 ? (
+              {(walletData.myGigs?.length || 0) === 0 ? (
                 <div className="empty-state">
                   <span className="material-symbols-outlined">assignment</span>
                   <p>No active gigs</p>
@@ -797,7 +806,7 @@ export default function Wallet() {
                 </div>
               ) : (
                 <div className="my-gigs-list">
-                  {walletData.myGigs.map(gig => (
+                  {(walletData.myGigs || []).map(gig => (
                     <div key={gig.id} className="my-gig-item">
                       <div className="my-gig-info">
                         <h4>{gig.title}</h4>
@@ -833,7 +842,7 @@ export default function Wallet() {
               </div>
               <p className="section-desc">Companies sponsor your learning through vouchers</p>
               
-              {walletData.vouchers.length === 0 ? (
+              {(walletData.vouchers?.length || 0) === 0 ? (
                 <div className="empty-state">
                   <span className="material-symbols-outlined">redeem</span>
                   <p>No vouchers yet</p>
@@ -841,7 +850,7 @@ export default function Wallet() {
                 </div>
               ) : (
                 <div className="vouchers-grid">
-                  {walletData.vouchers.map(voucher => (
+                  {(walletData.vouchers || []).map(voucher => (
                     <div key={voucher.id} className={`voucher-card ${voucher.status}`}>
                       <div className="voucher-sponsor">
                         <span className="material-symbols-outlined">business</span>
@@ -912,14 +921,14 @@ export default function Wallet() {
                 <div className="stat-card">
                   <span className="material-symbols-outlined">school</span>
                   <div className="stat-info">
-                    <span className="stat-value">{walletData.tutoringSessions.filter(s => s.status === 'completed').length}</span>
+                    <span className="stat-value">{(walletData.tutoringSessions || []).filter(s => s.status === 'completed').length}</span>
                     <span className="stat-label">Sessions Completed</span>
                   </div>
                 </div>
                 <div className="stat-card">
                   <span className="material-symbols-outlined">schedule</span>
                   <div className="stat-info">
-                    <span className="stat-value">{walletData.tutoringSessions.filter(s => s.status === 'scheduled').length}</span>
+                    <span className="stat-value">{(walletData.tutoringSessions || []).filter(s => s.status === 'scheduled').length}</span>
                     <span className="stat-label">Upcoming</span>
                   </div>
                 </div>
@@ -928,7 +937,7 @@ export default function Wallet() {
 
             <section className="section">
               <h3>Scheduled Sessions</h3>
-              {walletData.tutoringSessions.filter(s => s.status === 'scheduled').length === 0 ? (
+              {(walletData.tutoringSessions || []).filter(s => s.status === 'scheduled').length === 0 ? (
                 <div className="empty-state">
                   <span className="material-symbols-outlined">event</span>
                   <p>No upcoming sessions</p>
@@ -936,7 +945,7 @@ export default function Wallet() {
                 </div>
               ) : (
                 <div className="sessions-list">
-                  {walletData.tutoringSessions.filter(s => s.status === 'scheduled').map(session => (
+                  {(walletData.tutoringSessions || []).filter(s => s.status === 'scheduled').map(session => (
                     <div key={session.id} className="session-card">
                       <div className="session-info">
                         <h4>{session.subject}</h4>
@@ -959,7 +968,7 @@ export default function Wallet() {
             <section className="section">
               <h3>Past Sessions</h3>
               <div className="sessions-list past">
-                {walletData.tutoringSessions.filter(s => s.status === 'completed').map(session => (
+                {(walletData.tutoringSessions || []).filter(s => s.status === 'completed').map(session => (
                   <div key={session.id} className="session-card completed">
                     <div className="session-info">
                       <h4>{session.subject}</h4>
